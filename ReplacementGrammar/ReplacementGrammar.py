@@ -7,7 +7,7 @@ Microsoft Code4Cash
 
 import re, math
 
-f = open('SampleInput.txt', 'r')
+f = open('ActualInput.txt', 'r')
 f_str = f.read()
 f.close()
 lines = f_str.split('\r\n')
@@ -16,15 +16,11 @@ lines = [line for line in lines if line]
 message = lines[-1]
 rules = lines[:-1]
 
-print message
-
 for rule in rules:
     rule_match = re.match("^(.+)\|(.+)$", rule)
     if rule_match:
         pattern = rule_match.group(1)
         replace = rule_match.group(2)
-
-        print "'" + pattern + "'", "'" + replace + "'"
 
         message = message.replace(pattern, replace)
 
