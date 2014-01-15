@@ -3,7 +3,7 @@ DEG_PER_HOUR = (360.to_f / 12)
 DEG_PER_MIN = (360.to_f / 60)
 DEG_PER_SEC = DEG_PER_MIN
 
-file = File.new("SampleInput.txt", "r")
+file = File.new("ActualInput.txt", "r")
 lines = file.readlines
 
 
