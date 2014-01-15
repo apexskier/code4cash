@@ -7,7 +7,7 @@ Microsoft Code4Cash
 
 import re, math
 
-f = open('SampleInput.txt', 'r')
+f = open('ActualInput.txt', 'r')
 f_str = f.read()
 f.close()
 lines = f_str.split('\r\n')

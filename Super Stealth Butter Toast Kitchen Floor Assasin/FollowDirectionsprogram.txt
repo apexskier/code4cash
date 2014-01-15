@@ -5,7 +5,7 @@ Cameron Little
 Microsoft Code4Cash
 """
 
-f = open('SampleInput.txt', 'r')
+f = open('ActualInput.txt', 'r')
 f_str = f.read()
 f.close()
 instructions = f_str.lower().split('\r\n')
