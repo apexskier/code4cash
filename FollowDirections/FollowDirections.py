@@ -7,6 +7,7 @@ Microsoft Code4Cash
 
 f = open('SampleInput.txt', 'r')
 f_str = f.read()
+f.close()
 instructions = f_str.lower().split('\r\n')
 pos = [0, 0] # starting pos [n/s, e/w]
 directions = ['n', 'e', 's', 'w']
@@ -32,3 +33,4 @@ for instruction in instructions:
 
 f = open('FollowDirections.txt', 'w')
 f.write(str(pos[1]) + ',' + str(pos[0]) + '\r\n')
+f.close()
