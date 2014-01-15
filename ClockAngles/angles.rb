@@ -46,7 +46,7 @@ lines.map! do |line|
 end
 
 
-file = File.new("Output.txt", "w")
+file = File.new("ClockAngles.txt", "w")
 lines.each do |line|
   file.puts line
 end
