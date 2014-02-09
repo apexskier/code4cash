@@ -1,0 +1,21 @@
+procedure main()
+
+    local line, sep, num, drome, groups, l, r
+    local f
+    f := open("SampleInput.txt")
+
+    while line := read(f) do {
+        sep := find("|", line)
+        num := line[sep + 1:0]
+        &subject := drome := line[1:sep]
+        groups := (*drome / 2) / num
+        l := []
+        r := []
+        &pos := 0
+        while (*l < groups) & put(l, move(-num))
+        &pos := 1
+        while (*r < groups) & put(r, move(num))
+        write(line || "|" || if (!l == !r) then 1 else 0)
+    }
+
+end
