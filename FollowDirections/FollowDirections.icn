@@ -1,0 +1,28 @@
+procedure main()
+
+    local line, dir, dirs, x, y, i, val
+    local f
+    f := open("ActualInput.txt")
+
+    dir := 0
+    x := 0
+    y := 0
+
+    while line := read(f) do {
+        if (val := (line ? if &pos := (find("Move ", line) + 5) then tab(0))) then {
+            case dir of {
+                0 : x +:= val
+                2 : x -:= val
+                1 : y +:= val
+                3 : y -:= val
+            }
+        }
+        case (line ? if &pos := (find("Turn ", line) + 5) then tab(0)) of {
+            "left" : dir := if (dir - 1) < 0 then 3 else dir - 1 % 4
+            "right" : dir := (dir + 1) % 4
+        }
+    }
+
+    write(y,',',x,'\r\n')
+
+end
